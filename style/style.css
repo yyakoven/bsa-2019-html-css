@@ -100,23 +100,37 @@ a.logo {
 	min-width: 200px;
 	height: 400px;
 	box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
-	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: white;
+	border-radius: 6px;
 }
 
+.card  p {
+	padding: 10px;
+}
+.title {
+	font-family: 'Luckiest Guy';
+}
 .card img {
 	width: 100%;
 	object-fit: cover;
 	object-position: top;
 	height: 200px;
+	border-radius: 5px  5px 0 0;
 }
-
+.info {
+	background-color: #5D7CE8;
+	border-radius: 0 0 5px 5px;
+}
 aside {
 	grid-area: aside;
 	/* background-color: #42444e; */
+}
+
+.comment:first-child {
+	margin-bottom: 10px;
 }
 
 .comment {
@@ -129,6 +143,7 @@ aside {
 	height: 100px;
 	object-fit: cover;
 	object-position: center;
+	margin-right:  20px;
 }
 
 .author {
@@ -191,4 +206,53 @@ footer li {
 }
 footer img {
 	width: 50px;
+}
+
+@media screen and (max-width: 900px) {
+	body {
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+	}
+	aside {
+		display: contents;
+	}
+	header {
+		grid-row: 1;
+	}
+	.author {
+		grid-row: 2;
+	}
+	main {
+		grid-row: 3;
+	}
+
+	.socials {
+		text-align: center;
+		grid-row: 4;
+	}
+
+	aside .socials i {
+		margin: 20px;
+		font-size: 2em;
+	}
+
+	.subscribe {
+		grid-row: 5;
+	}
+
+	.search {
+		grid-row: 6;
+	}
+
+	.tagcloud {
+		grid-row: 7;
+	}
+
+	.last-comments {
+		grid-row: 8;
+	}
+
+	footer {
+		grid-row: 9;
+	}
 }
