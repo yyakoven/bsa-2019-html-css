@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+main {
+	display: grid;
+	grid-template-columns:  repeat( auto-fit, minmax(220px, 1fr) );
+}
+
+header img {
+	height: 50px;
+	width: 50px;
+}
+
+header span{
+	font-family: 'Luckiest Guy'
+}
+
+header a {
+	text-decoration: none;
+	font-size: 2em;
+	color:  #1dafe5;
+}
+.card {
+	min-width: 200px;
+	height: 400px;
+	box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
+	margin: 10px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	height: 150px;
+}
