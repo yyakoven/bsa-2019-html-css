@@ -1,38 +1,194 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
 }
+
+body {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-row-gap: 40px;
+	grid-column-gap: 20px;
+	background-color: #424242;
+	grid-template-areas: 
+	"header header"
+	"main aside"
+	"footer footer";
+	grid-template-columns: 1fr 350px;
+}
+
+
 main {
 	display: grid;
 	grid-template-columns:  repeat( auto-fit, minmax(220px, 1fr) );
+	grid-gap: 20px;
+	grid-area: main;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 50px 50px;
+	grid-area: header;
+	padding-top: 20px;
+}
+header menu {
+	grid-column: 2;
+	grid-row: 2;
+	justify-self: flex-end;
+	align-self: flex-end;
+}
+header ul li{
+	display: inline-block;
+}
+
+header .socials {
+	font-size: 2em;
+	height: auto;
+	width: fit-content;
+	justify-self: flex-end;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+header menu li + li {
+	margin-left: 10px;
 }
 
 header img {
-	height: 50px;
-	width: 50px;
+	height: 100px;
+	width: 100px;
 }
 
-header span{
-	font-family: 'Luckiest Guy'
+header .highlight{
+	font-family: 'Luckiest Guy';
+	display: inline-block;
 }
 
-header a {
+header a{
 	text-decoration: none;
-	font-size: 2em;
 	color:  #1dafe5;
+}
+
+header menu a {
+	font-size: 1.5em;
+}
+
+a.logo {
+	font-size: 3em;
+}
+
+.fa-search {
+	margin-right: 20px;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+}
+.date {
+	align-self: flex-end;
+}
+
+.title {
+	align-self: center;
 }
 .card {
 	min-width: 200px;
 	height: 400px;
 	box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
-	margin: 10px;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	background-color: white;
 }
 
-img {
+.card img {
 	width: 100%;
 	object-fit: cover;
 	object-position: top;
+	height: 200px;
+}
+
+aside {
+	grid-area: aside;
+	/* background-color: #42444e; */
+}
+
+.comment {
+	border: 1px solid royalblue;
+	display: flex;
+}
+
+.comment img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.author {
+	display: flex;
+}
+
+aside .socials {
+	font-size: 1.5em;
+}
+
+aside .subscribe form{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+aside .search {
+	display: flex;
+}
+
+aside .search input {
+	width: 100%;
+}
+
+aside .search i {
+	font-size: 1.5em;
+	align-self: center;
+	justify-self: center;
+	margin: 0;
+}
+
+.tagcloud {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.tagcloud a {
+	margin: 4px;
+}
+
+.author img {
+	width: 150px;
 	height: 150px;
+	object-fit: cover;
+	object-position: center;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	grid-area: footer;
+}
+
+footer li {
+	display: inline-block;
+	list-style: none;
+}
+footer img {
+	width: 50px;
 }
