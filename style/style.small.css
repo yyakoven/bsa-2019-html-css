@@ -1,0 +1,127 @@
+@media screen and (max-width: 760px) {
+    body {
+        --accent: #1dafe5;
+        --darkgray: #212121;
+        position: relative;
+    }
+    header {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 100px;
+    }
+    header menu {
+        display: none;
+        visibility: hidden;
+    }
+    header .logo {
+        grid-row: 2;
+        grid-column: 1/-1;
+        justify-self: center;
+        font-size: 2.3em;
+    }
+    header .fab {
+        display: none;
+    }
+
+    header .menu-wrap {
+        justify-self: start;
+        align-self: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    header input
+    {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 32px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    header span.ham
+    {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: var(--accent);
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.2s linear,
+            background 0.2s linear,
+            opacity 0.2s ease;
+    }
+
+    header span.ham:first-child
+    {
+        transform-origin: 0% 0%;
+    }
+
+    header span.ham:nth-last-child(2)
+    {
+        transform-origin: 0% 100%;
+    }
+
+    header input:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: white;
+    }
+
+    header input:checked ~ span:nth-last-child(3)
+    {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    header input:checked ~ span:nth-last-child(2)
+    {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    header input:checked ~ menu
+    {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        width: 50%;
+        background-color: var(--darkgray);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    header input:checked ~ menu ul {
+        margin-top: 23px;
+    }
+    
+    header input:checked ~ menu li {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    header .socials {
+        grid-row: 1;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside .socials a i{
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}

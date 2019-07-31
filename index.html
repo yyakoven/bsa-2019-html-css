@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PunchLine</title>
 	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="style/style.medium.css">
+	<link rel="stylesheet" href="style/style.small.css">
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:300|Source+Sans+Pro&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
@@ -19,14 +21,20 @@
 			<a href="#"><i class="fab fa-flickr"></i></a>
 			<a href="#"><i class="fab fa-pinterest-square"></i></a>
 		</div>
-		<menu>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Kaboom</a></li>
-			</ul>
-		</menu>
+		<div class="menu-wrap">
+			<input type="checkbox" />
+			<span class="ham"></span>
+			<span class="ham"></span>
+			<span class="ham"></span>
+			<menu>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Roundhouse</a></li>
+					<li><a href="#">Kick</a></li>
+				</ul>
+			</menu>
+		</div>
 	</header>
 	<main>
 		<h2>Chuck Facts</h2>
@@ -53,7 +61,7 @@
 			<img src="images/chuck2.jpg" alt="">
 		</figure>
 				<p class="title">#5</p>
-			<p class="joke">Chuck Norris doesn't needs try-catch, exceptions are too afraid to raise</p>
+			<p class="joke">Chuck Norris can dereference NULL.</p>
 			<p class="date">01.01.1970</p>
 			<div class="info">
 				<p class="rating">
@@ -107,7 +115,7 @@
 				<img src="images/chuck5.jpg" alt="">
 			</figure>
 				<p class="title">#2</p>
-			<p class="joke">If Chuck Norris writes code with bugs, the bugs fix themselves.</p>
+			<p class="joke">Chuck Norris can write infinite recursion functions and have them return.</p>
 			<p class="date">01.01.1970</p>
 			<div class="info">
 				<p class="rating">
@@ -146,7 +154,7 @@
 			<img src="images/author.jpg" alt="">
 			<p>
 				<span class="name"> Cordelia Walker</span><br>
-				Diggin' up jokes for ya for longer than you I've been alive.
+				Diggin' up jokes for ya for longer than you can count.
 			</p>
 		</div>
 	</div>
@@ -197,7 +205,7 @@
 	<footer>
 		<img src="images/punch.png">
 		<ul>
-			<li>cwalker@example.com</li>
+			<li>cwalker@example.com</li> |
 			<li>205-554-8774</li>
 		</ul>
 		<p>Cordelia Walker</p>
