@@ -59,6 +59,10 @@ header a {
 	color: var(--accent);
 }
 
+header .logo {
+	font-size: 3em;
+}
+
 header .logo img {
 	height: 100px;
 	width: 100px;
@@ -99,10 +103,6 @@ header menu li+li {
 
 header menu a {
 	font-size: 1.5em;
-}
-
-header a.logo {
-	font-size: 3em;
 }
 
 header .socials .fa-search {
