@@ -4,15 +4,21 @@
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
 }
-header h1, main h2 {
+
+header h1,
+main h2 {
 	display: none;
 }
 
-html {
-	padding: 20px;
+.date {
+	color: grey;
+	font-style: italic;
 }
+
 body {
 	--accent: #1dafe5;
+	--darkgray: #212121;
+	--blueish: #5D7CE8;
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -20,38 +26,46 @@ body {
 	grid-row-gap: 40px;
 	grid-column-gap: 20px;
 	background-color: #424242;
-	grid-template-areas: 
-	"header header"
-	"main aside"
-	"footer footer";
+	grid-template-areas:
+		"header header"
+		"main aside"
+		"footer footer";
 	grid-template-columns: 1fr 350px;
 	background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(172,960,459)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%233b3d3e'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='827' height='689.2' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.09'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(172,960,459)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%233b3d3e'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='827' height='689.2' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.09'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 20px;
 }
 
 
 main {
 	display: grid;
-	grid-template-columns:  repeat( auto-fit, minmax(255px, 1fr) );
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	grid-gap: 20px;
 	grid-area: main;
 }
 
 header {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 50px 50px;
 	grid-area: header;
 }
-header menu {
-	grid-column: 2;
-	grid-row: 2;
-	justify-self: flex-end;
-	align-self: flex-end;
+
+header a {
+	text-decoration: none;
+	color: var(--accent);
 }
-header ul li{
+
+header .logo img {
+	height: 100px;
+	width: 100px;
+}
+
+header .logo .highlight {
+	font-family: 'Luckiest Guy';
 	display: inline-block;
 }
 
@@ -64,108 +78,101 @@ header .socials {
 	grid-row: 1;
 }
 
-header menu li + li {
-	margin-left: 10px;
+header .menu-wrap {
+	grid-column: 2;
+	grid-row: 2;
+	justify-self: flex-end;
+	align-self: flex-end;
 }
 
-header img {
-	height: 100px;
-	width: 100px;
+header .menu-wrap input {
+	display: none;
 }
 
-header .highlight{
-	font-family: 'Luckiest Guy';
+header menu ul li {
 	display: inline-block;
 }
 
-header a{
-	text-decoration: none;
-	color: var(--accent);
+header menu li+li {
+	margin-left: 10px;
 }
 
 header menu a {
 	font-size: 1.5em;
 }
 
-a.logo {
+header a.logo {
 	font-size: 3em;
 }
 
-.fa-search {
+header .socials .fa-search {
 	margin-right: 20px;
 }
 
-.info {
-	display: flex;
-	justify-content: space-between;
-}
-.date {
-	justify-self: flex-end;
-	color: grey;
-	font-style: italic;
-}
-
-.title {
-	align-self: center;
-}
-.card {
+main .card {
 	box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
 	display: grid;
-	grid-template-columns: 1fr;
 	grid-template-rows: repeat(2, auto) 80px auto;
 	background-color: white;
 	border-radius: 6px;
+	color: var(--darkgray)
 }
 
-.card  p {
-	padding: 10px;
-	font-size: 1.1em;
-}
-
-.title {
-	font-family: 'Luckiest Guy';
-	font-size: 1.3em;
-	justify-self: center;
-}
-
-.card img {
-	width: 100%;
-	object-fit: cover;
-	object-position: top;
-	height: 200px;
-	border-radius: 5px  5px 0 0;
-	transition: all 0.6s;
-}
-
-.card figure {
-	border-radius: 5px  5px 0 0;
+main .card figure {
+	border-radius: 5px 5px 0 0;
 	width: 100%;
 	height: 200px;
 	overflow: hidden;
 }
 
-.card img:hover {
+main .card img {
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	height: 200px;
+	border-radius: 5px 5px 0 0;
+	transition: all 0.6s;
+}
+
+main .card img:hover {
 	transform: scale(1.2);
 }
 
-.info {
+main .card p {
+	font-size: 1.1em;
+	padding: 10px;
+}
+
+main .card .title {
+	align-self: center;
+	font-family: 'Luckiest Guy';
+	font-size: 1.3em;
+	justify-self: center;
+}
+
+main .card .date {
+	justify-self: flex-end;
+}
+
+main .card .info {
+	display: flex;
+	justify-content: space-between;
 	background-color: #5D7CE8;
 	border-radius: 0 0 5px 5px;
 }
 
-.info .comments:hover {
+main .info .comments:hover {
 	cursor: pointer;
 	color: var(--accent);
 }
 
 aside {
 	grid-area: aside;
+	align-content: flex-start;
 	padding: 10px;
 	display: grid;
-	grid-auto-flow: row;
-	align-content: flex-start;
-	grid-row-gap: 20px;
-	background-color: rgba(1,1,1,0.3);
+	grid-row-gap: 15px;
+	background-color: rgba(1, 1, 1, 0.3);
 	border-radius: 5px;
 }
 
@@ -175,14 +182,25 @@ aside .about-author {
 	grid-row-gap: 20px;
 	border: 2px dashed var(--accent);
 }
-aside .author {
+
+aside .about-author .author,
+aside .last-comments .comment {
+	color: var(--darkgray);
 	display: flex;
-	background-color:rgba(255,255,255,0.6);
+	background-color: rgba(255, 255, 255, 0.6);
 	padding: 5px;
 }
 
-aside .about-author img {
+aside .about-author img,
+aside .comment img {
 	margin-right: 5px;
+	object-fit: cover;
+	object-position: center;
+}
+
+aside .about-author img {
+	width: 130px;
+	height: 130px;
 }
 
 aside .about-author .name {
@@ -198,50 +216,43 @@ aside .socials {
 	text-align: right;
 }
 
-.subscribe form {
-	display: grid;
-	grid-row-gap: 5px;
-}
-
-input, button {
-	border-radius: 3px;
-	border: none;
-	padding: 5px;
-	height: 30px;
-}
-
-input:focus {
-	border: 2px solid #5D7CE8;
-}
-
-.subscribe form button {
-	background-color: #5D7CE8;
-	color: black;
-	font-size: 1.1em;
-	text-transform: uppercase;
-}
-
-button:hover {
-	cursor: pointer;
-}
-
-aside .search input {
-	margin-right: 5px;
-}
-
-aside .search a{
-	color: black;
-}
-
-aside .socials a{
+aside .socials a {
 	font-size: 1.5em;
 	color: black;
 }
 
-aside .subscribe form{
+aside .subscribe form {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+}
+
+aside .subscribe form {
+	display: grid;
+	grid-row-gap: 5px;
+}
+
+aside .subscribe input,
+aside .subscribe button {
+	border-radius: 3px;
+	border: none;
+	padding: 5px;
+	height: 30px;
+	text-transform: uppercase;
+}
+
+aside input:focus {
+	border: 2px solid var(--blueish);
+}
+
+aside .subscribe button {
+	background-color: var(--blueish);
+	color: black;
+	font-size: 1.1em;
+}
+
+aside .subscribe button:hover {
+	cursor: pointer;
 }
 
 aside .search {
@@ -249,36 +260,27 @@ aside .search {
 }
 
 aside .search input {
+	margin-right: 5px;
 	width: 100%;
 }
 
-aside .search i {
+aside .search a {
+	color: black;
 	font-size: 1.5em;
-	align-self: center;
-	justify-self: center;
-	margin: 0;
 }
 
-.tagcloud {
+aside .tagcloud {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
+	font-size: 1.3em;
 }
 
-.tagcloud a {
-	margin: 4px;
-	font-size: 1.3em;
+aside .tagcloud a {
 	color: black;
+	margin: 4px;
 	font-weight: bold;
 	text-decoration: none;
-}
-
-.about-author img {
-	width: 150px;
-	height: 150px;
-	object-fit: cover;
-	object-position: center;
 }
 
 aside .last-comments {
@@ -288,21 +290,17 @@ aside .last-comments {
 	padding: 5px;
 }
 
-.comment {
-	background-color:rgba(255,255,255,0.6);
-	display: flex;
-	padding: 5px;
+aside .comment {
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.comment img {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	object-position: center;
-	margin-right:  10px;
+aside .comment img {
+	width: 80px;
+	height: 80px;
 }
 
-.comment .name {
+aside .comment .name {
 	font-weight: bold;
 }
 
@@ -313,62 +311,13 @@ footer {
 	align-items: center;
 	grid-area: footer;
 	font-weight: bold;
-	/* background-color: rgba(0, 0, 0, 0.3) */
 }
 
 footer li {
 	display: inline-block;
 	list-style: none;
 }
+
 footer img {
 	width: 50px;
-}
-
-@media screen and (max-width: 900px) {
-	body {
-		grid-template-columns: 1fr;
-		grid-column-gap: 0;
-	}
-	aside {
-		display: contents;
-	}
-	header {
-		grid-row: 1;
-	}
-	.about-author {
-		grid-row: 2;
-	}
-	main {
-		grid-row: 3;
-	}
-
-	.socials {
-		text-align: center;
-		grid-row: 4;
-	}
-
-	aside .socials i {
-		margin: 20px;
-		font-size: 2em;
-	}
-
-	.subscribe {
-		grid-row: 5;
-	}
-
-	.search {
-		grid-row: 6;
-	}
-
-	.tagcloud {
-		grid-row: 7;
-	}
-
-	.last-comments {
-		grid-row: 8;
-	}
-
-	footer {
-		grid-row: 9;
-	}
 }

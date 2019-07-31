@@ -1,0 +1,52 @@
+@media screen and (max-width: 900px) {
+	body {
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+	}
+
+	aside {
+		display: contents;
+	}
+
+	header {
+		grid-row: 1;
+	}
+
+	.about-author {
+		grid-row: 2;
+	}
+
+	main {
+		grid-row: 3;
+	}
+
+	.socials {
+		text-align: center;
+		grid-row: 4;
+	}
+
+	aside .socials i {
+		margin: 20px;
+		font-size: 2em;
+	}
+
+	.subscribe {
+		grid-row: 5;
+	}
+
+	.search {
+		grid-row: 6;
+	}
+
+	.tagcloud {
+		grid-row: 7;
+	}
+
+	.last-comments {
+		grid-row: 8;
+	}
+
+	footer {
+		grid-row: 9;
+	}
+}
